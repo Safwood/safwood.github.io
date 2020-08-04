@@ -1,0 +1,18 @@
+.order-section {
+  background: url("../../images/bg/bg-form.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.order-section::after {
+  content: url("../../images/bg/leaf2.png");
+  position: absolute;
+  right: 10px;
+  bottom: 58px;
+}
+.order-section::before {
+  content: url("../../images/bg/berry.svg");
+  position: absolute;
+  left: 51px;
+  bottom: 69px;
+  display: block;
+}

@@ -1,0 +1,36 @@
+.benefits {
+  display: flex;
+}
+
+.benefits__item {
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+}
+.benefits__item:first-child {
+  padding-left: 0;
+}
+.benefits__item:last-child {
+  padding-right: 0;
+}
+.benefits__item:last-child::before {
+  display: none;
+}
+.benefits__item::before {
+  content: url(../../images/icons/separator.svg);
+  position: absolute;
+  right: 0;
+  top: 30px;
+  transform: translateX(50%);
+}
+
+.benefits-section {
+  position: relative;
+  background: url("../../images/bg/bg-leaf2.png") left top 57% no-repeat;
+}
+.benefits-section::after {
+  content: url("../../images/pictures/raspberry.png");
+  position: absolute;
+  left: 0;
+  bottom: -80px;
+}

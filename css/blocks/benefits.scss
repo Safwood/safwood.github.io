@@ -1,0 +1,43 @@
+.benefits {
+  display: flex;
+}
+
+.benefits__item {
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: url(../../images/icons/separator.svg);
+    position: absolute;
+    right: 0;
+    top: 30px;
+    transform: translateX(50%);
+  }
+}
+
+.benefits-section {
+  position: relative;
+  background: url("../../images/bg/bg-leaf2.png") left top 57% no-repeat;
+
+  &::after {
+    content: url("../../images/pictures/raspberry.png");
+    position: absolute;
+    left: 0;
+    bottom:-80px;
+  }
+
+}
+
