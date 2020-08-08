@@ -1,19 +1,28 @@
 .menu {
-  margin-right: 42px;
-  font-size: 18px;
+  margin-right: 5%;
+  font-size: rem(18px);
+  padding-top: rem(5px);
+
+  @include tablets() {
+    display: none;
+  }
 }
 
 .menu__list {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .menu__link {
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .menu__item {
-  margin-right: 27px;
+  margin-right: rem(27px);
+  margin-bottom: rem(10px);
 
   &:last-child {
     margin-right: 0;

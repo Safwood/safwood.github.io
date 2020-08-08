@@ -1,5 +1,11 @@
 .benefits {
   display: flex;
+
+  @include phones() {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 40px 0 10px;
+  }
 }
 
 .benefits__item {
@@ -20,24 +26,44 @@
   }
 
   &::before {
-    content: url(../../images/icons/separator.svg);
+    content: url(../images/icons/separator.svg);
     position: absolute;
     right: 0;
-    top: 30px;
+    top: rem(30px);
     transform: translateX(50%);
+
+    @include tablets() {
+      display: none;
+      
+    }
+  }
+
+  @include phones() {
+    padding: 0;
+    margin-bottom: rem(30px);
   }
 }
 
 .benefits-section {
   position: relative;
-  background: url("../../images/bg/bg-leaf2.png") left top 57% no-repeat;
+  background: url("../images/bg/bg-leaf2.png") left top 57% no-repeat;
 
-  &::after {
-    content: url("../../images/pictures/raspberry.png");
-    position: absolute;
-    left: 0;
-    bottom:-80px;
+  @include tablets() {
+    background-position: left top 11%;
   }
 
-}
+  @include phones() {
+    background: none;
+  }
 
+  &::after {
+    content: url("../images/pictures/raspberry.png");
+    position: absolute;
+    left: 0;
+    bottom:rem(-80px);
+
+    @include phones() {
+      display: none;
+    }
+  }
+}

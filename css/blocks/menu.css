@@ -1,15 +1,20 @@
 .menu {
-  margin-right: 42px;
-  font-size: 15px;
+  margin-right: 5%;
+  font-size: 1rem;
 }
 
 .menu__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu__link {
+  text-decoration: none;
 }
 
 .menu__item {
-  margin-right: 28px;
+  margin-right: 27px;
 }
 .menu__item:last-child {
   margin-right: 0;

@@ -6,15 +6,23 @@
   &::after {
     content: url("../images/bg/leaf2.png");
     position: absolute;
-    right: 10px;
-    bottom:58px;
+    right: rem(10px);
+    bottom:rem(58px);
+
+    @include tablets() {
+      display: none;
+    }
   }
 
   &::before {
     content: url("../images/bg/berry.svg");
     position: absolute;
-    left: 51px;
-    bottom:69px;
+    left: rem(51px);
+    bottom:rem(69px);
     display: block;
+
+    @include tablets() {
+      display: none;
+    }
   }
 }

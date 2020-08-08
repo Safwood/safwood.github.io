@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+  .container {
+    max-width: rem(400px);
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    max-width: rem(300px);
+  }
+}

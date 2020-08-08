@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #313131;
+  padding: 2% 0;
+  font-size: 1.313rem;
+}
+
+.footer_col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__address {
+  margin-bottom: 1%;
+}
+
+.footer__phone {
+  display: flex;
+}
+.footer__phone:hover {
+  color: #497870;
+}
+
+.footer__socials-list {
+  display: flex;
+}
+
+.footer__socials-item {
+  margin-right: 1%;
+}
+.footer__socials-item:last-child {
+  margin-right: 0;
+}

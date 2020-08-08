@@ -1,20 +1,18 @@
 .section {
-  padding: 100px 80px;
+  padding: rem(100px) rem(80px);
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  min-height: 650px;
-  margin-bottom: 60px;
+  min-height: rem(682px);
   background-color: white;
 }
 
 .section__title {
-  font-size: 48px;
+  font-size: rem(30px);
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   color: black;
-  margin-bottom: 31px;
+  margin-bottom: rem(31px);
 }
 
 .section--font--color--green {
@@ -25,5 +23,5 @@
 }
 
 .section__title--order {
-  margin-bottom: 57px;
+  margin-bottom: rem(57px);
 }

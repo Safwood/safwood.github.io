@@ -1,5 +1,10 @@
+$baseFontSize: 18px;
+$tablets: 768px;
+$phones: 480px;
+
 @import url("./layout/normalize.css");
 
+@import "media";
 @import "base";
 
 @import "blocks/benefit";
@@ -22,3 +27,7 @@
 @import "blocks/radio";
 @import "blocks/reviews";
 @import "blocks/section";
+@import "blocks/footer";
+@import "blocks/contacts";
+@import "blocks/map-section";
+@import "blocks/hamburger";

@@ -1,0 +1,38 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #313131;
+  padding: 2% 0;
+  font-size: rem(24px);
+}
+
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+
+  @include phones() {
+    flex-direction: column;
+  }
+}
+
+.footer__socials-list {
+  display: flex;
+  margin-right: rem(36px);
+
+  @include phones() {
+    margin-right: 0;
+    margin-bottom: rem(35px);
+  }
+}
+
+.footer__socials-item {
+  margin-right: rem(9px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

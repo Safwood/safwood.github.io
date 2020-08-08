@@ -27,8 +27,8 @@
 
 .benefit__title {
   font-weight: bold;
-  font-size: 27px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 1.7778rem;
   margin-bottom: 18px;
   text-align: center;
   color: black;
@@ -36,8 +36,8 @@
 
 .benefit__desc {
   font-weight: 300;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1.2222rem;
   color: #666666;
   text-align: center;
 }
