@@ -15,7 +15,7 @@
 
     @include phones() {
       top:rem(16px);
-      right: rem(-26px);
+      right: rem(-44px);
     }
   }
 
@@ -74,7 +74,6 @@
 .reviews__content {
   flex: 1;
   margin-left: rem(40px);
-  padding: rem(24px) rem(0px);
   text-align: center;
 
   @include tablets() {
@@ -95,12 +94,12 @@
 
 .reviews__text {
   margin-bottom: rem(36px);
-  width: 75%;
+  padding-right: 77px;
   font-size: rem(18px);
   line-height: rem(28px);
 
   @include tablets() {
-    width: rem(598px);
+    padding: 0px;
   }
 
   @include phones() {

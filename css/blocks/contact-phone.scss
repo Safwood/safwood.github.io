@@ -4,12 +4,16 @@
   align-items: center;
   font-size: rem(22px);
   text-decoration: none;
-  color: #497870;
+  color: #fff;
 
   @include phones() {
     text-align: center;
     font-size: rem(21px);
   }
+}
+
+.contact-phone--green {
+  color: #497870;
 }
 
 .contact-phone__icon {
@@ -20,6 +24,12 @@
   width: rem(12px);
   height: rem(12px);
   margin-right: rem(6px);
+  fill: white;
+
+}
+
+.contact-phone__image--green {
+  fill: #497870;
 }
 
 .contact-phone__text {

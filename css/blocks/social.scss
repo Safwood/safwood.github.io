@@ -1,0 +1,11 @@
+.social__icon {
+  stroke: #B3B3B3;
+  fill: #B3B3B3;
+  width: rem(20px);
+  height: rem(20px);
+  transition: 0.4s;
+}
+
+.social__icon:hover {
+  fill: #292929;
+}
