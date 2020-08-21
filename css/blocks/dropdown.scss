@@ -1,0 +1,31 @@
+.dropdown {
+  background:rgba(255, 255, 255, 0.95);
+  box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  width: rem(273px);
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  position: absolute;
+  left: 100%;
+  transition: 0.4s opacity;
+  top: -9999px;
+  opacity: 0;
+}
+
+.dropdown__row {
+  height: rem(57px);
+}
+
+.dropdown__image {
+  padding: 0 rem(20px);
+  width: rem(70px);
+}
+
+.dropdown__ingredient {
+  width: rem(137px);
+}
+
+.dropdown__quantity {
+  text-align: right;
+}

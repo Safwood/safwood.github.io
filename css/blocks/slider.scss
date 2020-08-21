@@ -1,0 +1,193 @@
+$black29:#292929;
+$black15:#151515;
+
+.slider__section {
+position: relative;
+background: #F8FAF9;
+
+  &::before {
+    content: url(../images/bg/leave-slider.png);
+    right: 0;
+    bottom: -29%;
+    position: absolute;
+    z-index: 1;
+
+    @include tablets {
+      right: rem(-73px);
+    }
+  }
+
+  &::after {
+    content: url(../images/bg/blackberry.png);
+    position: absolute;
+    right: 0;
+    bottom: -5%;
+    z-index: 1;
+    @include tablets {
+      right: rem(-73px);
+    }
+
+  }
+}
+
+.slider__container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+
+  @include phones {
+    padding: rem(60px) 0;
+  }
+}
+
+.sliders {
+  width: rem(880px);
+  display: flex;
+  overflow: hidden;
+
+  @include tablets {
+    margin-right: rem(10px);
+    width: rem(350px);
+  }
+}
+
+.slider__list {
+  flex: 1;
+  display: flex;
+  margin-right: rem(37px);
+  position: relative;
+  right: 0;
+  transition: right 0.3s;
+
+  
+
+  @include tablets {
+    margin-right: 0;
+  }
+}
+
+.bx-wrapper {
+  box-shadow: none !important;
+  border: none;
+  background: transparent;
+}
+
+.slider {
+  width: rem(880px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+    width: rem(350px);
+  }
+}
+
+.slider__image {
+  margin-right: 7%;
+  width: 48%;
+
+  @include tablets {
+    width: 85%;
+    margin-right: 0;
+  }
+}
+
+.slider__desc {
+  @include tablets {
+    text-align: center;
+  }
+}
+
+.slider__ingredients {
+  background: #86C3D7;
+  border-radius: rem(4px);
+  width: rem(91px);
+  height: rem(91px);
+  padding: rem(12px) rem(22px);
+  margin-bottom: rem(23px);
+  position: relative;
+
+  @include tablets {
+    display: none;
+  }
+
+    &:hover {
+      .dropdown {
+        top: 0;
+        opacity: 1;
+      }
+    }
+}
+
+.slider__ingredients-icon {
+  margin-bottom: rem(4px);
+}
+
+.slider__ingredients-title {
+  font-size: rem(14px);
+  line-height: rem(17px);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+
+.slider__name {
+  font-weight: bold;
+  font-size: rem(36px);
+  line-height: rem(43px);
+  text-transform: uppercase;
+  color: $black29;
+  margin-bottom: rem(23px);
+}
+
+.slider__about {
+  font-size: rem(18px);
+  line-height: rem(22px);
+  color: #666;
+  margin-bottom: rem(24px);
+}
+
+.slider__weight-calories {
+  margin-bottom: rem(24px);
+  display: flex;
+
+  @include tablets {
+  justify-content: center;
+  text-align: left;
+  }
+}
+
+.slider__cell {
+  margin-right: rem(44px);
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.slider__what {
+  font-size: rem(18px);
+  line-height: rem(22px);
+  color: #666;
+}
+
+.slider__value {
+ @extend .slider__what;
+ font-weight: bold;
+ color: black;
+}
+
+.slider__buy {
+  @extend .slider__weight-calories
+}
+
+.slider__price {
+  font-weight: 300;
+  font-size: rem(60px);
+  line-height: rem(60px);
+  color: $black15;
+  margin-right: rem(20px);
+}

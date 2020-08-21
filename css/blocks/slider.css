@@ -1,30 +1,27 @@
-$black29:#292929;
-$black15:#151515;
-
-.products__container {
+.slider__container {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  padding: rem(60px);
+  padding: rem(60px) rem(66px);
 }
 
-.products__list {
-  width: 80%;
+.slider__list {
+  flex: 1;
 }
 
-.product {
+.slider {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.product__image {
-  margin-right: rem(73px);
-  width: rem(460px);
+.slider__image {
+  margin-right: 7%;
+  width: 50%;
 }
 
-.product__ingredients {
+.slider__ingredients {
   background: #86C3D7;
   border-radius: rem(4px);
   width: rem(91px);
@@ -33,56 +30,49 @@ $black15:#151515;
   margin-bottom: rem(23px);
 }
 
-.product__ingredients-icon {
+.slider__ingredients-icon {
   margin-bottom: rem(4px);
 }
 
-.product__ingredients-title {
+.slider__ingredients-title {
   font-size: rem(14px);
   line-height: rem(17px);
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
+  color: #fff;
 }
 
-.product__name {
+.slider__name {
   font-weight: bold;
   font-size: rem(36px);
   line-height: rem(43px);
-  color: $black29;
+  text-transform: uppercase;
+  color: #292929;
   margin-bottom: rem(23px);
 }
 
-.product__about {
+.slider__about, .slider__what, .slider__quantity {
   font-size: rem(18px);
   line-height: rem(22px);
   color: #666;
   margin-bottom: rem(24px);
 }
 
-.product__weight-calories {
+.slider__weight-calories, .slider__buy {
   margin-bottom: rem(24px);
   display: flex;
   justify-content: space-between;
 }
 
-.product__what {
- @extend .product__about
+.slider__quantity {
+  font-weight: bold;
+  color: black;
 }
 
-.product__quantity {
- @extend .product__what;
- font-weight: bold;
- color: black;
-}
-
-.product__buy {
-  @extend .product__weight-calories
-}
-
-.product__price {
+.slider__price {
   font-weight: 300;
   font-size: rem(60px);
   line-height: rem(60px);
-  color: $black15;
+  color: #151515;
 }

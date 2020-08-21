@@ -4,7 +4,6 @@
   flex-direction: column;
   height: 100vh;
   min-height: rem(682px);
-  background-color: white;
 
   @include phones() {
     padding: rem(52px) 0;
@@ -12,7 +11,7 @@
 }
 
 .section__title {
-  font-size: rem(30px);
+  font-size: rem(48px);
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;

@@ -16,7 +16,6 @@ html {
 
 body {
   min-height: 100%;
-  background-color: #F8FAF9;
   font-family: "Alegreya Sans", Verdana, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -238,6 +237,7 @@ button {
   border-radius: 5.5555555556rem;
   display: inline-block;
   line-height: 1;
+  max-height: 60px;
 }
 .btn:hover {
   color: #497870;
@@ -300,12 +300,8 @@ button {
   white-space: nowrap;
 }
 
-.errow__left {
-  margin-right: 0.6666666667rem;
-}
-
-.errow__right {
-  margin-left: 0.6666666667rem;
+.errow {
+  cursor: pointer;
 }
 
 .feature {
@@ -725,81 +721,192 @@ button {
   }
 }
 
-.products__container {
+.slider__section {
+  position: relative;
+  background: #F8FAF9;
+}
+.slider__section::before {
+  content: url(../images/bg/leave-slider.png);
+  right: 0;
+  bottom: -29%;
+  position: absolute;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .slider__section::before {
+    right: -4.0555555556rem;
+  }
+}
+.slider__section::after {
+  content: url(../images/bg/blackberry.png);
+  position: absolute;
+  right: 0;
+  bottom: -5%;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .slider__section::after {
+    right: -4.0555555556rem;
+  }
+}
+
+.slider__container {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  padding: 3.3333333333rem;
+}
+@media (max-width: 480px) {
+  .slider__container {
+    padding: 3.3333333333rem 0;
+  }
 }
 
-.products__list {
-  width: 80%;
+.sliders {
+  width: 48.8888888889rem;
+  display: flex;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .sliders {
+    margin-right: 0.5555555556rem;
+    width: 19.4444444444rem;
+  }
 }
 
-.product {
+.slider__list {
+  flex: 1;
+  display: flex;
+  margin-right: 2.0555555556rem;
+  position: relative;
+  right: 0;
+  transition: right 0.3s;
+}
+@media (max-width: 768px) {
+  .slider__list {
+    margin-right: 0;
+  }
+}
+
+.bx-wrapper {
+  box-shadow: none !important;
+  border: none;
+  background: transparent;
+}
+
+.slider {
+  width: 48.8888888889rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.product__image {
-  margin-right: 4.0555555556rem;
-  width: 25.5555555556rem;
+@media (max-width: 768px) {
+  .slider {
+    flex-direction: column;
+    width: 19.4444444444rem;
+  }
 }
 
-.product__ingredients {
+.slider__image {
+  margin-right: 7%;
+  width: 48%;
+}
+@media (max-width: 768px) {
+  .slider__image {
+    width: 85%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider__desc {
+    text-align: center;
+  }
+}
+
+.slider__ingredients {
   background: #86C3D7;
   border-radius: 0.2222222222rem;
   width: 5.0555555556rem;
   height: 5.0555555556rem;
   padding: 0.6666666667rem 1.2222222222rem;
   margin-bottom: 1.2777777778rem;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .slider__ingredients {
+    display: none;
+  }
+}
+.slider__ingredients:hover .dropdown {
+  top: 0;
+  opacity: 1;
 }
 
-.product__ingredients-icon {
+.slider__ingredients-icon {
   margin-bottom: 0.2222222222rem;
 }
 
-.product__ingredients-title {
+.slider__ingredients-title {
   font-size: 0.7777777778rem;
   line-height: 0.9444444444rem;
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
+  color: #fff;
 }
 
-.product__name {
+.slider__name {
   font-weight: bold;
   font-size: 2rem;
   line-height: 2.3888888889rem;
+  text-transform: uppercase;
   color: #292929;
   margin-bottom: 1.2777777778rem;
 }
 
-.product__about, .product__what, .product__quantity {
+.slider__about {
   font-size: 1rem;
   line-height: 1.2222222222rem;
   color: #666;
   margin-bottom: 1.3333333333rem;
 }
 
-.product__weight-calories, .product__buy {
+.slider__weight-calories, .slider__buy {
   margin-bottom: 1.3333333333rem;
   display: flex;
-  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .slider__weight-calories, .slider__buy {
+    justify-content: center;
+    text-align: left;
+  }
 }
 
-.product__quantity {
+.slider__cell {
+  margin-right: 2.4444444444rem;
+}
+.slider__cell:last-child {
+  margin-right: 0;
+}
+
+.slider__what, .slider__value {
+  font-size: 1rem;
+  line-height: 1.2222222222rem;
+  color: #666;
+}
+
+.slider__value {
   font-weight: bold;
   color: black;
 }
 
-.product__price {
+.slider__price {
   font-weight: 300;
   font-size: 3.3333333333rem;
   line-height: 3.3333333333rem;
   color: #151515;
+  margin-right: 1.1111111111rem;
 }
 
 .radio {
@@ -848,6 +955,40 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
+}
+
+.reviews-section {
+  position: relative;
+}
+.reviews-section::after {
+  content: url("../images/pictures/strawberries.svg");
+  position: absolute;
+  right: -2.3333333333rem;
+  top: -0.7222222222rem;
+}
+.reviews-section::before {
+  content: url("../images/bg/bg-leaf3.svg");
+  position: absolute;
+  left: -0.7222222222rem;
+  bottom: -10.5555555556rem;
+  z-index: 1;
+}
+
+.reviews-container {
+  position: relative;
+}
+.reviews-container::before {
+  content: url("../images/pictures/berries.svg");
+  position: absolute;
+  left: -9.9444444444rem;
+  bottom: -10rem;
+  z-index: 1;
+}
+@media (max-width: 480px) {
+  .reviews-container::before {
+    left: -3.9444444444rem;
+    bottom: -7rem;
+  }
 }
 
 .reviews__display {
@@ -904,6 +1045,26 @@ button {
     align-items: center;
     text-align: center;
   }
+}
+
+.reviews__list {
+  min-height: 15.5555555556rem;
+  position: relative;
+}
+
+.reviews__item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.4s;
+}
+.reviews__item--active {
+  opacity: 1;
+  position: static;
 }
 
 .reviews__avatar {
@@ -974,38 +1135,13 @@ button {
   justify-content: center;
 }
 
-.reviews-section {
-  position: relative;
-}
-.reviews-section::after {
-  content: url("../images/pictures/strawberries.svg");
+.interactive-avatar__link {
+  display: block;
   position: absolute;
-  right: -2.3333333333rem;
-  top: -0.7222222222rem;
-}
-.reviews-section::before {
-  content: url("../images/bg/bg-leaf3.svg");
-  position: absolute;
-  left: -0.7222222222rem;
-  bottom: -10.5555555556rem;
-  z-index: 1;
-}
-
-.reviews-container {
-  position: relative;
-}
-.reviews-container::before {
-  content: url("../images/pictures/berries.svg");
-  position: absolute;
-  left: -9.9444444444rem;
-  bottom: -10rem;
-  z-index: 1;
-}
-@media (max-width: 480px) {
-  .reviews-container::before {
-    left: -3.9444444444rem;
-    bottom: -7rem;
-  }
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .section {
@@ -1014,7 +1150,6 @@ button {
   flex-direction: column;
   height: 100vh;
   min-height: 37.8888888889rem;
-  background-color: white;
 }
 @media (max-width: 480px) {
   .section {
@@ -1023,7 +1158,7 @@ button {
 }
 
 .section__title {
-  font-size: 1.6666666667rem;
+  font-size: 2.6666666667rem;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
@@ -1126,15 +1261,20 @@ button {
 }
 
 .hamburger {
+  position: fixed;
+  top: 31px;
+  right: 36px;
   width: 24px;
   height: 20px;
   flex-direction: column;
   justify-content: space-between;
   display: none;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .hamburger {
     display: inline-flex;
+    right: 10px;
   }
 }
 
@@ -1155,4 +1295,141 @@ button {
 
 .social__icon:hover {
   fill: #292929;
+}
+
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #313131;
+  flex-direction: column;
+  padding: 2.3333333333rem;
+  color: #fff;
+  opacity: 0.9;
+  z-index: 10000;
+}
+
+.overlay-menu__btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 4.0555555556rem;
+}
+
+.overlay-menu__btn-image {
+  height: 1.1111111111rem;
+  width: 1.1111111111rem;
+  cursor: pointer;
+}
+
+.overlay-menu__content {
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay-menu__item {
+  margin-bottom: 1.1111111111rem;
+}
+.overlay-menu__item:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  width: 15.1666666667rem;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  position: absolute;
+  left: 100%;
+  transition: 0.4s opacity;
+  top: -9999px;
+  opacity: 0;
+}
+
+.dropdown__row {
+  height: 3.1666666667rem;
+}
+
+.dropdown__image {
+  padding: 0 1.1111111111rem;
+  width: 3.8888888889rem;
+}
+
+.dropdown__ingredient {
+  width: 7.6111111111rem;
+}
+
+.dropdown__quantity {
+  text-align: right;
+}
+
+.team-section {
+  background: #fff;
+}
+
+.team-members {
+  width: 100%;
+}
+
+.team-members__list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.team-members__item {
+  max-width: calc(100%/4 - 20px);
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-member__image {
+  margin-bottom: 1.1666666667rem;
+}
+
+.team-member__title {
+  display: flex;
+  font-weight: bold;
+  font-size: 1.1666666667rem;
+  justify-content: center;
+  color: #292929;
+  margin-bottom: 0.4444444444rem;
+  cursor: pointer;
+}
+
+.team-member__name {
+  margin-right: 0.2222222222rem;
+}
+
+.team-member__job {
+  text-align: center;
+  height: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+.team-member__job--active {
+  height: 7.2222222222rem;
+  visibility: visible;
+}
+
+.team-member__job-title {
+  font-size: 1rem;
+  margin-bottom: 0.2222222222rem;
+}
+
+.team-member__job-desc {
+  font-weight: 300;
+  font-size: 18px;
+  color: #666;
 }
