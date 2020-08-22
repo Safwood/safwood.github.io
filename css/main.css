@@ -1051,6 +1051,11 @@ button {
   min-height: 15.5555555556rem;
   position: relative;
 }
+@media (max-width: 768px) {
+  .reviews__list {
+    min-height: 22.8333333333rem;
+  }
+}
 
 .reviews__item {
   position: absolute;
@@ -1377,6 +1382,11 @@ button {
 .team-members {
   width: 100%;
 }
+@media (max-width: 768px) {
+  .team-members {
+    padding-top: 0.5555555556rem;
+  }
+}
 
 .team-members__list {
   display: flex;
@@ -1384,8 +1394,30 @@ button {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .team--version--desktop {
+    display: none;
+  }
+}
+
+.team--version--mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .team--version--mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .team-members__item {
   max-width: calc(100%/4 - 20px);
+}
+@media (max-width: 768px) {
+  .team-members__item {
+    max-width: 12.3333333333rem;
+  }
 }
 
 .team-member {
@@ -1400,27 +1432,42 @@ button {
 
 .team-member__title {
   display: flex;
+  align-items: center;
   font-weight: bold;
   font-size: 1.1666666667rem;
   justify-content: center;
   color: #292929;
   margin-bottom: 0.4444444444rem;
   cursor: pointer;
+  border: none;
+}
+.team-member__title:focus {
+  outline: none;
+}
+@media (max-width: 768px) {
+  .team-member__title {
+    margin-bottom: 0.8888888889rem;
+  }
 }
 
 .team-member__name {
   margin-right: 0.2222222222rem;
 }
 
-.team-member__job {
-  text-align: center;
+.team-member__block {
   height: 0;
-  visibility: hidden;
+  overflow: hidden;
   transition: 0.4s;
 }
-.team-member__job--active {
+
+.team-member__desc {
+  text-align: center;
   height: 7.2222222222rem;
-  visibility: visible;
+}
+@media (max-width: 768px) {
+  .team-member__desc {
+    height: 24rem;
+  }
 }
 
 .team-member__job-title {

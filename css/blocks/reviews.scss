@@ -92,6 +92,10 @@
 .reviews__list {
   min-height: rem(280px);
   position: relative;
+
+  @include tablets {
+    min-height: rem(411px);
+  }
 }
 
 .reviews__item {

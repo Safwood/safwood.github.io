@@ -4,16 +4,42 @@
 
 .team-members {
   width: 100%;
+
+  @include tablets {
+  padding-top: rem(10px);
+  }
+  
 }
 
 .team-members__list {
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+}
+
+.team--version--desktop {
+  @include tablets {
+    display:none;
+  }
+}
+
+.team--version--mobile {
+  display: none;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .team-members__item {
   max-width: calc(100%/4 - 20px);
+
+  @include tablets {
+    max-width: rem(222px);
+  }
 }
 
 .team-member {
@@ -28,12 +54,22 @@
 
 .team-member__title {
   display: flex;
+  align-items: center;
   font-weight: bold;
   font-size: rem(21px);
   justify-content: center;
   color:#292929;
   margin-bottom: rem(8px);
   cursor: pointer;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include tablets {
+    margin-bottom: rem(16px);
+  }
 
 }
 
@@ -41,17 +77,20 @@
   margin-right: rem(4px);
 }
 
-.team-member__job {
-  text-align: center;
+.team-member__block {
   height: 0;
-  visibility: hidden;
+  overflow: hidden;
   transition: 0.4s;
+}
 
-  &--active {
-    height: rem(130px);
-    visibility: visible;
-
+.team-member__desc {
+  text-align: center;
+  height: rem(130px);
+  
+  @include tablets {
+    height: rem(432px);
   }
+
 }
 
 .team-member__job-title {
