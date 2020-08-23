@@ -1,0 +1,19 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  height: rem(176px);
+  width: rem(309px);
+}
+
+.modal__message {
+  margin-bottom: rem(18px);
+  color: #000;
+}

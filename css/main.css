@@ -242,6 +242,9 @@ button {
 .btn:hover {
   color: #497870;
 }
+.btn:focus {
+  outline: none;
+}
 
 .btn--theme--white {
   color: #365A49;
@@ -780,7 +783,6 @@ button {
   margin-right: 2.0555555556rem;
   position: relative;
   right: 0;
-  transition: right 0.3s;
 }
 @media (max-width: 768px) {
   .slider__list {
@@ -794,14 +796,14 @@ button {
   background: transparent;
 }
 
-.slider {
+.slider__item {
   width: 48.8888888889rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 768px) {
-  .slider {
+  .slider__item {
     flex-direction: column;
     width: 19.4444444444rem;
   }
@@ -1302,7 +1304,7 @@ button {
   fill: #292929;
 }
 
-.overlay-menu {
+.overlay {
   position: fixed;
   top: 0;
   right: 0;
@@ -1428,6 +1430,17 @@ button {
 
 .team-member__image {
   margin-bottom: 1.1666666667rem;
+  display: flex;
+  justify-content: center;
+}
+
+.team-member__picture {
+  object-fit: cover;
+}
+@media (max-width: 480px) {
+  .team-member__picture {
+    height: 10rem;
+  }
 }
 
 .team-member__title {
@@ -1469,6 +1482,11 @@ button {
     height: 24rem;
   }
 }
+@media (max-width: 480px) {
+  .team-member__desc {
+    height: 18.3333333333rem;
+  }
+}
 
 .team-member__job-title {
   font-size: 1rem;
@@ -1479,4 +1497,24 @@ button {
   font-weight: 300;
   font-size: 18px;
   color: #666;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  height: 9.7777777778rem;
+  width: 17.1666666667rem;
+}
+
+.modal__message {
+  margin-bottom: 1rem;
+  color: #000;
 }

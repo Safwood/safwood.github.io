@@ -50,6 +50,16 @@
 
 .team-member__image {
   margin-bottom: rem(21px);
+  display: flex;
+  justify-content: center;
+  
+}
+
+.team-member__picture {
+  object-fit: cover;
+  @include phones {
+    height: rem(180px);
+  }
 }
 
 .team-member__title {
@@ -89,6 +99,10 @@
   
   @include tablets {
     height: rem(432px);
+  }
+
+  @include phones {
+    height: rem(330px);
   }
 
 }

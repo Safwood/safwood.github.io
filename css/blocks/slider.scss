@@ -2,8 +2,8 @@ $black29:#292929;
 $black15:#151515;
 
 .slider__section {
-position: relative;
-background: #F8FAF9;
+  position: relative;
+  background: #F8FAF9;
 
   &::before {
     content: url(../images/bg/leave-slider.png);
@@ -58,9 +58,6 @@ background: #F8FAF9;
   margin-right: rem(37px);
   position: relative;
   right: 0;
-  transition: right 0.3s;
-
-  
 
   @include tablets {
     margin-right: 0;
@@ -73,7 +70,7 @@ background: #F8FAF9;
   background: transparent;
 }
 
-.slider {
+.slider__item {
   width: rem(880px);
   display: flex;
   justify-content: space-between;

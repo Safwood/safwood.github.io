@@ -3,12 +3,14 @@ const slider = $('.slider__list').bxSlider({
   controls: false
 });
 
-$(".errow__right").on('click', e => {
+$('.errow__left').click(e => {
   e.preventDefault();
-  slider.goToNextSlide();
+
+  slider.goToPrevSlide();
 })
 
-$(".errow__left").on('click', e => {
+$('.errow__right').click(e => {
   e.preventDefault();
-  slider.goToPrevSlide();
+
+  slider.goToNextSlide();
 })
