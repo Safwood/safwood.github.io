@@ -92,6 +92,7 @@
 .reviews__list {
   min-height: rem(280px);
   position: relative;
+  z-index: 2;
 
   @include tablets {
     min-height: rem(411px);
@@ -123,7 +124,6 @@
     width: rem(132px);
     height: rem(130px);
   }
-
 }
 
 .reviews__avatar-img {

@@ -1,19 +1,36 @@
 .modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom:0;
+  left: 0;
+  background-color:  #313131;
+  padding: 20% rem(42px) 0;
+  opacity: 0.9;
+  z-index: 10000;
+  display: none;
+
+  @include tablets {
+    padding: 50% rem(42px) 0;
+  }
 }
 
+
 .modal__content {
+  padding:rem(35px) rem(60px);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #fff;
-  height: rem(176px);
+  margin: auto;
   width: rem(309px);
+  height: rem(176px);
 }
 
 .modal__message {
   margin-bottom: rem(18px);
   color: #000;
+  text-align: center;
 }
+
