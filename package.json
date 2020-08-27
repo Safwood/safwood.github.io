@@ -8,6 +8,7 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
