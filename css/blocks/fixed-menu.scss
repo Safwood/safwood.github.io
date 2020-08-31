@@ -5,6 +5,8 @@
   z-index: 100;
 }
 
+
+
 .fixed-menu__item {
   margin-bottom: rem(5px);
 
@@ -41,4 +43,9 @@
     transform: translate(-50%, -50%);
   }
 
+}
+
+.fixed-menu--shadowed .fixed-menu__link::before {
+  background-color: rgb(82, 77, 77);
+  
 }

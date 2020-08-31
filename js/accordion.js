@@ -1,7 +1,23 @@
+const mesureWidth = item => {
+  const screenWidth = $(window).width();
+  const container = item.closest(".product-menu__list");
+  const titleBlocks = container.find(".product-menu__item-link");
+  const titlesWidth = titleBlocks.width() * titleBlocks.length;
+
+  const isMobile = window.matchMedia("(max-width:768px").matches;
+
+  if (isMobile) {
+    return screenWidth - titlesWidth;
+  } else {
+    return 500;
+  }
+}
+
 const openItem = (link) =>{
   const wrapper = link.closest(".product-menu__item");
   const text = wrapper.find(".product-menu__item-desc");
-  text.width('80%');
+  const reqWidth = mesureWidth(link);
+  text.width(reqWidth);
   wrapper.addClass("active");
 }
 
