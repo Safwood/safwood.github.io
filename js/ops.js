@@ -8,20 +8,20 @@ const performTransform = sectionEq => {
   const position = sectionEq * -100;
 
   const currentSection = sections.eq(sectionEq);
-        const menuTheme = currentSection.attr("data-sidemenu-theme");
-        const sideMenu = $(".fixed-menu")
+  const menuTheme = currentSection.attr("data-sidemenu-theme");
+  const sideMenu = $(".fixed-menu")
 
-        if (menuTheme == "shadow") {
-          sideMenu.addClass('fixed-menu--shadowed');
-        } else {
-          sideMenu.removeClass('fixed-menu--shadowed');
-        }
+  if (menuTheme == "shadow") {
+    sideMenu.addClass('fixed-menu--shadowed');
+  } else {
+    sideMenu.removeClass('fixed-menu--shadowed');
+  }
 
   display.css({
     transform: `translateY(${position}%)`
   })
 
-  sideMenu.find("fixed-menu__item").eq(sectionEq).addClass("fixed-menu__item--active").siblings().removeClass("fixed-menu__item--active");
+  sideMenu.find(".fixed-menu__item").eq(sectionEq).addClass("fixed-menu__item--active").siblings().removeClass("fixed-menu__item--active");
 }
 
 const scrollViewport = direction => {
@@ -39,11 +39,10 @@ const scrollViewport = direction => {
       performTransform(nextSection.index());
       setTimeout(() => {
         inScroll = false
-      }, 1300)
-
+      }, 1100)
     }
-    
   }
+
   if (direction == "prev" && prevSection.length){
     if (inScroll == false) {
       inScroll = true
@@ -52,8 +51,6 @@ const scrollViewport = direction => {
       performTransform(prevSection.index());
       setTimeout(() => {
         inScroll = false
-
-        sideMenu.find("fixed-menu__item").eq(sectionEq).addClass("fixed-menu__item--active").siblings().removeClass("fixed-menu__item--active");
 
       }, 1100)
     }
@@ -87,6 +84,8 @@ if (tagName !== "input" && tagName !=="textarea") {
   }
 }
 })
+
+
 
 $("[data-scroll-to]").click(e =>{
   e.preventDefault();

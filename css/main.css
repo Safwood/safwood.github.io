@@ -384,6 +384,9 @@ button {
 .fixed-menu--shadowed .fixed-menu__link::before {
   background-color: #524d4d;
 }
+.fixed-menu--shadowed .fixed-menu__link::before .fixed-menu__item--active .fixed-menu__link {
+  border-color: #524d4d;
+}
 
 .form {
   display: flex;
@@ -521,7 +524,6 @@ button {
   background-color: #61C4D9;
   color: #fff;
   height: 100vh;
-  min-height: 36.1111111111rem;
   position: relative;
 }
 @media (max-width: 768px) {
@@ -1171,7 +1173,6 @@ button {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  min-height: 37.8888888889rem;
 }
 @media (max-width: 480px) {
   .section {

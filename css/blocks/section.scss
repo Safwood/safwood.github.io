@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  min-height: rem(682px);
 
   @include phones() {
     padding: rem(52px) 0;
