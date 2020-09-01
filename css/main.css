@@ -1610,6 +1610,17 @@ button {
   justify-content: flex-end;
 }
 
+@media (max-width: 480px) {
+  .product-menu__item--active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+
 .product-menu__item-link {
   position: relative;
   height: 100%;
@@ -1659,6 +1670,11 @@ button {
   width: 0;
   flex: 1;
   transition: width 0.4s;
+}
+@media (max-width: 480px) {
+  .product-menu__item-desc {
+    transition: width 0;
+  }
 }
 
 .product-menu__item-desc--active {

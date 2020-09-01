@@ -16,8 +16,9 @@ const mesureWidth = item => {
     reqItemsWidth = screenWidth - titlesWidth;
   } if (isMobile) {
     reqItemsWidth = screenWidth - oneTitleWidth;
-    
-  } else {
+
+  } 
+  else {
     reqItemsWidth = 320;
   }
 
@@ -34,7 +35,7 @@ const openItem = (link) =>{
   const textBlock = wrapper.find(".product-menu__item-text")
   text.width(reqWidth.container);
   textBlock.width(reqWidth.textContainer);
-  wrapper.addClass("active");
+  wrapper.addClass("product-menu__item--active");
 }
 
 const closeAllItems = (container) => {
@@ -51,9 +52,9 @@ $(".product-menu__item-link").click(e => {
   const container = link.closest(".product-menu__list");
   const AllItems = link.closest('.product-menu__item');
 
-  if (AllItems.hasClass('active')) {
+  if (AllItems.hasClass('product-menu__item--active')) {
     closeAllItems(container);
-    AllItems.removeClass('active');
+    AllItems.removeClass('product-menu__item--active');
   } else {
     closeAllItems(container);
     openItem(link);
