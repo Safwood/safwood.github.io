@@ -46,11 +46,21 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  //position: relative;
 }
 
 .product-menu__item {
   display: flex;
   justify-content: flex-end;
+
+ // @include phones {
+    //position: absolute;
+   // top: 0;
+    //left: 0;
+   // bottom: 0;
+   // right: 0;
+   // z-index: 1;
+  //}
 }
 
 .product-menu__item-link {

@@ -1689,10 +1689,16 @@ button {
 }
 
 .player__container {
-  width: 662px;
-  height: 392px;
+  width: 36.7777777778rem;
+  height: 21.7777777778rem;
   margin: auto;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .player__container {
+    width: 90%;
+    height: 32%;
+  }
 }
 
 .player {
@@ -1716,6 +1722,22 @@ button {
   bottom: 0;
   right: 0;
   left: 0;
+  height: 100%;
+}
+
+.player-elem__wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.player-elem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
 }
 
@@ -1747,6 +1769,7 @@ button {
   background: url("../images/icons/Vector-errow.png") no-repeat;
   height: 0.9444444444rem;
   width: 1.3333333333rem;
+  margin-right: 0.5555555556rem;
 }
 
 .player__duration-completed:after {
@@ -1758,6 +1781,18 @@ button {
 .player__playback {
   width: 24.7777777778rem;
   position: relative;
+}
+@media (max-width: 768px) {
+  .player__playback {
+    width: 21.1111111111rem;
+    margin-right: 0.5555555556rem;
+  }
+}
+@media (max-width: 480px) {
+  .player__playback {
+    width: 13.8888888889rem;
+    margin-right: 0.5555555556rem;
+  }
 }
 .player__playback::before {
   content: "";
@@ -1784,4 +1819,9 @@ button {
 
 .player__duration {
   width: 105px;
+}
+@media (max-width: 768px) {
+  .player__duration {
+    font-size: 0.7777777778rem;
+  }
 }
