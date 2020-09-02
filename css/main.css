@@ -36,10 +36,9 @@ button:focus {
 }
 
 .container {
-  height: 100%;
   margin: 0 auto;
   width: 95%;
-  max-width: 1022px;
+  max-width: 940px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -230,6 +229,7 @@ button {
   position: absolute;
   left: 0;
   bottom: -4.4444444444rem;
+  z-index: 1;
 }
 @media (max-width: 480px) {
   .benefits-section::after {
@@ -299,8 +299,8 @@ button {
 }
 
 .contact-phone__image {
-  width: 0.6666666667rem;
-  height: 0.6666666667rem;
+  width: 0.7777777778rem;
+  height: 0.7777777778rem;
   margin-right: 0.3333333333rem;
   fill: white;
 }
@@ -349,6 +349,11 @@ button {
   right: 3%;
   z-index: 100;
 }
+@media (max-width: 768px) {
+  .fixed-menu {
+    display: none;
+  }
+}
 
 .fixed-menu__item {
   margin-bottom: 0.2777777778rem;
@@ -384,7 +389,8 @@ button {
 .fixed-menu--shadowed .fixed-menu__link::before {
   background-color: #524d4d;
 }
-.fixed-menu--shadowed .fixed-menu__link::before .fixed-menu__item--active .fixed-menu__link {
+
+.fixed-menu--shadowed .fixed-menu__item--active .fixed-menu__link {
   border-color: #524d4d;
 }
 
@@ -985,28 +991,11 @@ button {
   top: -0.7222222222rem;
 }
 .reviews-section::before {
-  content: url("../images/bg/bg-leaf3.svg");
+  content: url("../images/bg/reviews_decor.png");
   position: absolute;
   left: -0.7222222222rem;
-  bottom: -10.5555555556rem;
+  bottom: -42.5rem;
   z-index: 1;
-}
-
-.reviews-container {
-  position: relative;
-}
-.reviews-container::before {
-  content: url("../images/pictures/berries.svg");
-  position: absolute;
-  left: -9.9444444444rem;
-  bottom: -10rem;
-  z-index: 1;
-}
-@media (max-width: 480px) {
-  .reviews-container::before {
-    left: -3.9444444444rem;
-    bottom: -7rem;
-  }
 }
 
 .reviews__display {
@@ -1169,10 +1158,10 @@ button {
 }
 
 .section {
-  padding: 5.5555555556rem 4.4444444444rem;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  justify-content: center;
 }
 @media (max-width: 480px) {
   .section {
@@ -1304,7 +1293,6 @@ button {
 }
 
 .social__icon {
-  stroke: #B3B3B3;
   fill: #B3B3B3;
   width: 1.1111111111rem;
   height: 1.1111111111rem;
@@ -1555,15 +1543,12 @@ button {
 }
 
 .product-menu__section {
-  padding: 0;
-}
-
-.product-menu__container {
+  position: relative;
   background: url("../images/bg/accordion.jpg") center center no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: row;
-  position: relative;
+  height: 100%;
 }
 
 .product-menu__heading {
@@ -1627,6 +1612,9 @@ button {
   height: 100%;
   width: 5.6666666667rem;
   cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2.2222222222rem;
 }
 @media (max-width: 480px) {
   .product-menu__item-link {
@@ -1646,13 +1634,12 @@ button {
   font-style: normal;
   font-weight: bold;
   font-size: 2.6666666667rem;
-  text-align: center;
   color: #FFFFFF;
-  width: 439px;
   transform: rotate(-90deg);
-  position: absolute;
-  top: 50%;
   left: -168%;
+  white-space: nowrap;
+  top: 100%;
+  width: 100%;
 }
 @media (max-width: 480px) {
   .product-menu__item-title {
@@ -1703,6 +1690,10 @@ button {
   right: -3%;
   top: 68%;
   z-index: 1;
+}
+
+.container__player {
+  height: 100%;
 }
 
 .player__container {

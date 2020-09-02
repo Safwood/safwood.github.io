@@ -3,6 +3,10 @@
   top: 20%;
   right: 3%;
   z-index: 100;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .fixed-menu__item {
@@ -46,8 +50,9 @@
 .fixed-menu--shadowed .fixed-menu__link::before {
   background-color: rgb(82, 77, 77);
 
-  .fixed-menu__item--active .fixed-menu__link{
-    border-color: rgb(82, 77, 77);
-    
-  }
+  
+}
+
+.fixed-menu--shadowed .fixed-menu__item--active .fixed-menu__link{
+  border-color: rgb(82, 77, 77);
 }

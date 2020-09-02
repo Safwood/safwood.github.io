@@ -9,28 +9,11 @@
   }
 
   &::before {
-    content: url("../images/bg/bg-leaf3.svg");
+    content: url("../images/bg/reviews_decor.png");
     position: absolute;
     left: rem(-13px);
-    bottom:rem(-190px);
+    bottom:rem(-765px);
     z-index: 1;
-  }
-}
-
-.reviews-container {
-  position: relative;
-
-  &::before {
-    content: url("../images/pictures/berries.svg");
-    position: absolute;
-    left: rem(-179px);
-    bottom: rem(-180px);
-    z-index: 1;
-
-    @include phones() {
-      left: rem(-71px);
-      bottom: rem(-126px);
-    }
   }
 }
 

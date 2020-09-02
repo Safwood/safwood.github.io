@@ -19,7 +19,7 @@ const mesureWidth = item => {
 
   } 
   else {
-    reqItemsWidth = 320;
+    reqItemsWidth = 406;
   }
 
   return {
@@ -41,6 +41,7 @@ const openItem = (link) =>{
 const closeAllItems = (container) => {
   const items = container.find(".product-menu__item");
   const content = items.find(".product-menu__item-desc");
+  items.removeClass('product-menu__item--active');
   content.width('0');
 
 }

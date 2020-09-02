@@ -1,12 +1,10 @@
 .product-menu__section {
-  padding: 0
-}
-.product-menu__container {
+  position: relative;
   background: url('../images/bg/accordion.jpg') center center no-repeat;
   background-size: cover;
   display:flex;
   flex-direction: row;
-  position: relative;
+  height: 100%;
 }
 
 .product-menu__heading {
@@ -46,21 +44,13 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  //position: relative;
 }
 
 .product-menu__item {
   display: flex;
   justify-content: flex-end;
 
- // @include phones {
-    //position: absolute;
-   // top: 0;
-    //left: 0;
-   // bottom: 0;
-   // right: 0;
-   // z-index: 1;
-  //}
+ 
 }
 
 .product-menu__item--active {
@@ -79,6 +69,9 @@
   height: 100%;
   width: rem(102px);
   cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: rem(40px);
 
   @include phones {
     width: rem(90px);
@@ -97,13 +90,12 @@
   font-style: normal;
   font-weight: bold;
   font-size: rem(48px);
-  text-align: center;
   color: #FFFFFF;
-  width: 439px;
   transform: rotate(-90deg);
-  position: absolute;
-  top: 50%;
   left: -168%;
+  white-space: nowrap;
+  top: 100%;
+  width: 100%;
 
   @include phones {
     font-size: rem(40px);

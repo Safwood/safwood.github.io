@@ -1,8 +1,8 @@
 .section {
-  padding: rem(100px) rem(80px);
   display: flex;
   flex-direction: column;
   height: 100vh;
+  justify-content: center;
 
   @include phones() {
     padding: rem(52px) 0;

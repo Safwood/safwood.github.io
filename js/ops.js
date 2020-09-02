@@ -6,10 +6,15 @@ sections.first().addClass("active");
 
 const performTransform = sectionEq => {
   const position = sectionEq * -100;
-
+  const activeSection = sections.filter(".active");
+  
   const currentSection = sections.eq(sectionEq);
+  activeSection.removeClass("active")
+  currentSection.addClass("active");
   const menuTheme = currentSection.attr("data-sidemenu-theme");
   const sideMenu = $(".fixed-menu")
+
+  
 
   if (menuTheme == "shadow") {
     sideMenu.addClass('fixed-menu--shadowed');
@@ -34,8 +39,7 @@ const scrollViewport = direction => {
   if (direction == "next" && nextSection.length) {
     if (inScroll == false) {
       inScroll = true
-      activeSection.removeClass("active")
-      nextSection.addClass("active");
+      
       performTransform(nextSection.index());
       setTimeout(() => {
         inScroll = false
@@ -99,15 +103,13 @@ $("[data-scroll-to]").click(e =>{
 //github.com/mattbryson/TouchSwipe-Jquery-Plugin
 $("body").swipe({
   swipe:function (event, direction) {
-      const scroller = viewportScroller();
-      let scrollDirection = "";
+      let scrollDirection = null;
 
       if (direction == "up") {
-        scrollDirection = "next"
+        scrollViewport("next")
       }
       if (direction == "down") {
-        scrollDirection = "prev"
+        scrollViewport("prev")
       }
-      scroller[scrollDirection]();
     }
 });

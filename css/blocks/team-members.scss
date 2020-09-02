@@ -1,4 +1,4 @@
-.team-section {
+.team {
   background: #fff;
 }
 
@@ -8,7 +8,6 @@
   @include tablets {
   padding-top: rem(10px);
   }
-  
 }
 
 .team-members__list {
