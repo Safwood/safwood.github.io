@@ -55,11 +55,9 @@
   padding: rem(18px) rem(11px);
   border-radius: rem(4px);
 
-  &:focus {
-    border-color: #dee2bd;
-    outline: none;
+  @include tablets() {
+    height: rem(36px);
   }
-
   &--textarea {
     height: rem(180px);
     resize: none;
@@ -67,11 +65,18 @@
     @include tablets() {
       height: rem(82px);
     }
+
+    @include phones () {
+      height: rem(82px);
+    }
+
+    &:focus {
+      border-color: #dee2bd;
+      outline: none;
+    }
   }
 
-  @include tablets() {
-    height: 36px;
-  }
+  
 }
 
 .form__controls {
