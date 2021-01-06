@@ -68,6 +68,7 @@ $black15:#151515;
   box-shadow: none !important;
   border: none;
   background: transparent;
+  margin-bottom: 0;
 }
 
 .slider__item {
@@ -89,6 +90,10 @@ $black15:#151515;
   @include tablets {
     width: 85%;
     margin-right: 0;
+  }
+
+  @include phones {
+    width: 56%;
   }
 }
 

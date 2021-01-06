@@ -2,11 +2,11 @@ html {
   height: 100%;
   font-size: 18px;
 
-  @include tablets() {
+  @include tablets {
     font-size: $baseFontSize - 1px;
   }
 
-  @include phones() {
+  @include phones{
     font-size: $baseFontSize - 2px;
   }
 }
@@ -37,6 +37,7 @@ button {
   margin: 0 auto;
   width: 95%;
   max-width: 940px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
