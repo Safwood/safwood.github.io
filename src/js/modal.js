@@ -9,6 +9,14 @@ const validateFields = (form, fieldsArray) => {
   return errorFields.length == 0;
 }
 
+$('input').click(function (e) {
+  e.currentTarget.focus();
+})
+
+$('textarea').click(function (e) {
+  e.currentTarget.focus();
+})
+
 $(".form").submit(e => {
   e.preventDefault();
 
@@ -66,4 +74,9 @@ $(".form").submit(e => {
 
     $.fancybox.close();
   })
+})
+
+$(".form").click(e => {
+  console.log(e.currentTarget)
+  console.log(e.target)
 })

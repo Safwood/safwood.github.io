@@ -36,7 +36,7 @@ task("copy:sprite", () => {
 
 task('clean', () => {
   return src( 'dist/**/*', {read: false})
-    .pipe(rm())
+  .pipe(rm())
 })
 
 const css = [
@@ -60,12 +60,12 @@ task('sass', () => {
     .pipe(reload({stream:true}))
 });
 
-const libs = [
+const js = [
   'src/js/*.js'
 ]
 
 task('scripts', () => {
-  return src(libs)
+  return src(js)
     .pipe(gulpif(env=="dev",sourcemaps.init()))
     .pipe(concat("main.min.js", {newLine: ";"}))
     .pipe(gulpif(env=="prod", babel({
@@ -96,4 +96,3 @@ task("watch", () => {
 task("default", series("clean", parallel("copy:html", "copy:images", "copy:sprite", "sass", 'scripts'), parallel ("watch","server")));
 
 task("build", series("clean", parallel("copy:html", "copy:images", "copy:sprite", "sass", 'scripts')));
-
