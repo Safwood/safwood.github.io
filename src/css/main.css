@@ -690,6 +690,7 @@ button {
   margin-right: 5%;
   font-size: 1rem;
   padding-top: 0.2777777778rem;
+  z-index: 2;
 }
 @media (max-width: 768px) {
   .menu {

@@ -39,6 +39,10 @@
   @include tablets {
     max-width: rem(222px);
   }
+
+  @include phones {
+    max-width: rem(288px);
+  }
 }
 
 .team-member {
@@ -57,7 +61,7 @@
 .team-member__picture {
   object-fit: cover;
   @include phones {
-    height: rem(180px);
+    height: rem(126px);
   }
 }
 
@@ -78,6 +82,10 @@
 
   @include tablets {
     margin-bottom: rem(16px);
+  }
+
+  @include phones {
+    margin-bottom: rem(4px);
   }
 
 }
@@ -101,7 +109,7 @@
   }
 
   @include phones {
-    height: rem(330px);
+    height: rem(234px);
   }
 
 }
@@ -112,7 +120,7 @@
 }
 
 .team-member__job-desc {
-  font-weight: 300;
+  font-weight: 252px;
   font-size: 18px;
   color: #666;
 }

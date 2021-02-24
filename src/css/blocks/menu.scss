@@ -2,6 +2,7 @@
   margin-right: 5%;
   font-size: rem(18px);
   padding-top: rem(5px);
+  z-index: 2;
 
   @include tablets() {
     display: none;

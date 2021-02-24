@@ -13,6 +13,11 @@
   &--active {
     border-color: #365A49;
   }
+
+  @include phones() {
+    width: rem(56px);
+    height: rem(56px);
+  }
 }
 
 .interactive-avatar__link {

@@ -58,24 +58,27 @@
     flex: 1;
     width: 100%;
     text-align: center;
+  }
 
-    &:before {
-      content: "";
-      width: rem(353px);
-      height: rem(367px);
-      background: url("../images/bg/hero-decor-tablets.png") center center / contain no-repeat;
-      margin-bottom: 16px;
+  &:before {
+    content: "";
+    width: rem(353px);
+    height: rem(367px);
+    background: url("../images/bg/hero-decor-tablets.png") center center / contain no-repeat;
+    margin-bottom: 16px;
+    display: none;
+
+    @include tablets() {
       display: block;
+    }
 
-      @include phones() {
-        width: rem(326px);
-        height: rem(339px);
-      }
+    @include phones() {
+      width: rem(234px);
+      height: rem(234px);
+    }
 
-      @media (max-width: 360px) {
-        width: rem(192px);
-        height: rem(195px);
-      }
+    @media (max-width: 360px) {
+      display: none;
     }
   }
 }

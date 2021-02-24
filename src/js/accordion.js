@@ -1,6 +1,6 @@
 const mesureWidth = item => {
   let reqItemsWidth = 0;
-  const screenWidth = $(window).width();
+  const screenWidth = window.screen.width;
   const container = item.closest(".product-menu__list");
   const titleBlocks = container.find(".product-menu__item-link");
   const titlesWidth = titleBlocks.width() * titleBlocks.length;
@@ -10,13 +10,12 @@ const mesureWidth = item => {
   const paddingLeft = parseInt(textContainer.css("padding-left"));
 
   const isTablet = window.matchMedia("(max-width:768px").matches;
-  const isMobile = window.matchMedia("(max-width:480px").matches;
+  const isMobile = window.matchMedia("(max-device-width:480px").matches;
 
   if (isTablet) {
     reqItemsWidth = screenWidth - titlesWidth;
   } if (isMobile) {
-    reqItemsWidth = screenWidth - oneTitleWidth;
-
+    reqItemsWidth = window.screen.width - oneTitleWidth;
   } 
   else {
     reqItemsWidth = 406;
@@ -51,11 +50,10 @@ $(".product-menu__item-link").click(e => {
 
   const link = $(e.currentTarget);
   const container = link.closest(".product-menu__list");
-  const AllItems = link.closest('.product-menu__item');
+  const allItems = link.closest('.product-menu__item');
 
-  if (AllItems.hasClass('product-menu__item--active')) {
+  if (allItems.hasClass('product-menu__item--active')) {
     closeAllItems(container);
-    AllItems.removeClass('product-menu__item--active');
   } else {
     closeAllItems(container);
     openItem(link);

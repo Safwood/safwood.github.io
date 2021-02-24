@@ -31,8 +31,8 @@
   }
 
   @include phones {
-    width: rem(394px);
-  height: rem(233px);
+    width: rem(338px);
+  height: rem(176px);
   }
 }
 
@@ -155,7 +155,10 @@ overflow:hidden;
   top: 50%;
   left:0;
   transform: translate(-50%, -50%);
-  
+  @include phones {
+    height: 12px;
+    height: 12px;
+  }
 }
 
 .player__duration {

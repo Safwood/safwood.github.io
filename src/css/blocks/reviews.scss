@@ -14,6 +14,10 @@
     left: rem(-13px);
     bottom:rem(-765px);
     z-index: 1;
+    
+    @include phones() {
+      display: none;
+    }
   }
 }
 
@@ -24,6 +28,11 @@
   margin-bottom: 2%;
   overflow: hidden;
 
+  @include phones() {
+    padding: 2% 2% 0;
+    margin-bottom: 1%;
+  }
+
   &::after {
     content: url("../images/pictures/branch.svg");
     position: absolute;
@@ -33,8 +42,7 @@
     height: rem(78px);
 
     @include phones() {
-      top:rem(16px);
-      right: rem(-44px);
+      display: none;
     }
   }
 
@@ -53,11 +61,6 @@
     @include phones() {
       display: none;
     }
-  }
-  
-
-  @include phones() {
-    padding: 9% 5% 4%;
   }
 }
 
@@ -79,6 +82,10 @@
 
   @include tablets {
     min-height: rem(411px);
+  }
+
+  @include tablets {
+    min-height: rem(342px);
   }
 }
 
@@ -107,6 +114,11 @@
     width: rem(132px);
     height: rem(130px);
   }
+
+  @include phones() {
+    width: rem(78px);
+    height: rem(77px);
+  }
 }
 
 .reviews__avatar-img {
@@ -132,7 +144,8 @@
   color: black;
 
   @include phones() {
-    margin-bottom: rem(16px);
+    margin-bottom: rem(0px);
+    font-size: rem(25px);
   }
 }
 
@@ -148,6 +161,8 @@
 
   @include phones() {
     width: 100%;
+    margin-bottom: rem(9px);
+    font-size: rem(16px);
   }
 }
 
@@ -161,11 +176,3 @@
   justify-content: center;
 }
 
-.interactive-avatar__link {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}

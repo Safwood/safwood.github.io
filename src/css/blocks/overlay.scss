@@ -17,6 +17,10 @@
   display: flex;
   justify-content: flex-end;
   margin-bottom: rem(73px);
+
+  @include phones() {
+    margin-bottom: rem(36px);
+  }
 }
 
 .overlay-menu__btn-image {
@@ -31,6 +35,10 @@
   flex: 1;
   justify-content: center;
   text-align: center;
+
+  @include phones() {
+    font-size: rem(25px);
+  }
 }
 
 .overlay-menu__item {

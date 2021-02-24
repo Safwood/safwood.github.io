@@ -1,5 +1,6 @@
 const sections = $("section");
 const display = $(".maincontent");
+const sideMenu = $(".fixed-menu")
 let inScroll = false;
 
 sections.first().addClass("active");
@@ -12,10 +13,7 @@ const performTransform = sectionEq => {
   activeSection.removeClass("active")
   currentSection.addClass("active");
   const menuTheme = currentSection.attr("data-sidemenu-theme");
-  const sideMenu = $(".fixed-menu")
-
   
-
   if (menuTheme == "shadow") {
     sideMenu.addClass('fixed-menu--shadowed');
   } else {
@@ -35,7 +33,6 @@ const scrollViewport = direction => {
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
 
-
   if (direction == "next" && nextSection.length) {
     if (inScroll == false) {
       inScroll = true
@@ -43,7 +40,7 @@ const scrollViewport = direction => {
       performTransform(nextSection.index());
       setTimeout(() => {
         inScroll = false
-      }, 1100)
+      }, 1000)
     }
   }
 
@@ -74,22 +71,20 @@ $(window).on("wheel", e => {
 })
 
 $(window).on("keydown", (e) =>{
-const tagName = e.target.tagName.toLowerCase();
+  const tagName = e.target.tagName.toLowerCase();
 
-if (tagName !== "input" && tagName !=="textarea") {
-  switch (e.keyCode) {
-    case 38:
-      scrollViewport("prev");
-      break;
-  
-      case 40:
-        scrollViewport("next");
-      break;
+  if (tagName !== "input" && tagName !=="textarea") {
+    switch (e.keyCode) {
+      case 38:
+        scrollViewport("prev");
+        break;
+    
+        case 40:
+          scrollViewport("next");
+        break;
+    }
   }
-}
 })
-
-
 
 $("[data-scroll-to]").click(e =>{
   e.preventDefault();
@@ -100,16 +95,15 @@ $("[data-scroll-to]").click(e =>{
   performTransform(targetSection.index());
 })
 
-//github.com/mattbryson/TouchSwipe-Jquery-Plugin
-$("body").swipe({
-  swipe:function (event, direction) {
-      let scrollDirection = null;
+// github.com/mattbryson/TouchSwipe-Jquery-Plugin
+// $("body").swipe({
+//   swipe:function (event, direction) {
 
-      if (direction == "up") {
-        scrollViewport("next")
-      }
-      if (direction == "down") {
-        scrollViewport("prev")
-      }
-    }
-});
+//     if (direction == "up") {
+//       scrollViewport("next")
+//     }
+//     if (direction == "down") {
+//       scrollViewport("prev")
+//     }
+//   }
+// });

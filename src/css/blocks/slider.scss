@@ -15,6 +15,10 @@ $black15:#151515;
     @include tablets {
       right: rem(-73px);
     }
+
+    @include phones {
+      display: none;
+    }
   }
 
   &::after {
@@ -27,6 +31,10 @@ $black15:#151515;
       right: rem(-73px);
     }
 
+    @include phones {
+      display: none;    
+    }
+
   }
 }
 
@@ -37,7 +45,7 @@ $black15:#151515;
   align-items: center;
 
   @include phones {
-    padding: rem(60px) 0;
+    padding: 0;
   }
 }
 
@@ -58,6 +66,7 @@ $black15:#151515;
   margin-right: rem(37px);
   position: relative;
   right: 0;
+  transition: all 1s ease-out;
 
   @include tablets {
     margin-right: 0;
@@ -93,7 +102,8 @@ $black15:#151515;
   }
 
   @include phones {
-    width: 56%;
+    width: 54%;
+    margin-top: rem(23px);
   }
 }
 
@@ -144,6 +154,11 @@ $black15:#151515;
   text-transform: uppercase;
   color: $black29;
   margin-bottom: rem(23px);
+
+  @include phones {
+    font-size: rem(29px);
+    margin-bottom: rem(4px);
+  }
 }
 
 .slider__about {
@@ -151,6 +166,10 @@ $black15:#151515;
   line-height: rem(22px);
   color: #666;
   margin-bottom: rem(24px);
+
+  @include phones {
+    margin-bottom: rem(18px);
+  }
 }
 
 .slider__weight-calories {

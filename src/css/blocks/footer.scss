@@ -6,6 +6,10 @@
   color: #313131;
   padding: 2% 0;
   font-size: rem(24px);
+
+  @include phones() {
+    padding: 2% 0 10%;
+  }
 }
 
 .footer_container {

@@ -74,7 +74,7 @@
   padding-bottom: rem(40px);
 
   @include phones {
-    width: rem(90px);
+    width: rem(72px);
   }
 }
 
@@ -98,7 +98,7 @@
   width: 100%;
 
   @include phones {
-    font-size: rem(40px);
+    font-size: rem(36px);
     left: -222%;;
   }
 }
@@ -124,5 +124,9 @@
 
 .product-menu__item-text {
   padding: rem(30px) rem(80px) rem(30px) rem(38px);
+
+  @include phones {
+    padding: rem(30px) rem(40px) rem(30px) rem(38px);
+  }
 
 }

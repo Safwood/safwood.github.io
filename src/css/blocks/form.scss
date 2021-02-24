@@ -29,8 +29,16 @@
   display: flex;
   margin-bottom: rem(13px);
 
+  @include phones() {
+    margin-bottom: 0;
+  }
+
   &--textarea {
     margin-bottom: rem(38px);
+
+    @include phones() {
+      margin-bottom: rem(2px);
+    }
 
   }
 
@@ -91,6 +99,7 @@
 
   @include phones() {
     justify-content: center;
+    margin-bottom: rem(10px);
   }
 }
 
